@@ -1,13 +1,21 @@
+const { tsImportEqualsDeclaration } = require("@babel/types");
+
 class Tree {
-  // Твой код ту
+  constructor(name) {
+    this.name = name;
+  }
 }
 
 class Garden {
-  // Твой код тут
+    constructor(garden = []) {
+      this.garden = garden;
+    }
 }
 
 class Gardener {
-  // Твой код тут
+  constructor(name) {
+    this.name = name;
+  }
 }
 
 // Измени код выше, чтобы код ниже заработал.
