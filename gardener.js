@@ -7,9 +7,9 @@ class Tree {
 }
 
 class Garden {
-    constructor(arr = []) {
-      this.garden = arr;
-    }
+  constructor(arr = []) {
+    this.garden = arr;
+  }
 }
 
 class Gardener {
@@ -17,8 +17,11 @@ class Gardener {
     this.name = name;
   }
 
-  gatherFruits() {
-    return `${this.name} собрал фрукты с дерева ${this.garden}`};
+  gatherFruits(qwe) {
+    return qwe.garden.map(
+      (el) => `${this.name} собрал фрукты с дерева "${el.name}"`
+    );
+  }
 }
 
 // Измени код выше, чтобы код ниже заработал.
