@@ -16,6 +16,9 @@ class Gardener {
   constructor(name) {
     this.name = name;
   }
+
+  gatherFruits = (myLittleGarden) => {
+    return `${this.name} собрал фрукты с дерева ${myLittleGarden}`};
 }
 
 // Измени код выше, чтобы код ниже заработал.

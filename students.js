@@ -1,21 +1,44 @@
-// Заполните классы так, чтобы при вызове методов в переменные попадал нужный результат
+// Заполните классы так, чтобы при вызове методов в переменные
+// попадал нужный результат
 
 class Student {
-  // твой код тут
+  constructor(name, age, profession) {
+    this.name = name;
+    this.age = age;
+    this.profession = profession;
+  }
 }
 
 class Institute {
-  // твой код тут
+  constructor(arr = []) {
+    this.student = arr;
+  }
+
+  sortByAge() {
+    return this.student.sort((a, b) => a.age - b.age);
+  }
+
+  takeOnlyEngineers() {
+    return this.student.filter((el) => el.profession === "инженер");
+  }
+
+  averageAge() {
+    let res = 0;
+    return (
+      this.student.reduce((acum, age) => acum + age.age, res) /
+      this.student.length
+    );
+  }
 }
 
 // Код ниже менять нельзя
 
 const elbrus = new Institute([
-  new Student('Жмотяра', 43, 'экономист'),
-  new Student('Петушара', 25, 'инженер'),
-  new Student('Козлина', 31, 'инженер'),
-  new Student('Сопляк', 11, 'какулегенератор'),
-  new Student('Алкаш', 33, 'инженер'),
+  new Student("Жмотяра", 43, "экономист"),
+  new Student("Петушара", 25, "инженер"),
+  new Student("Козлина", 31, "инженер"),
+  new Student("Сопляк", 11, "какулегенератор"),
+  new Student("Алкаш", 33, "инженер"),
 ]);
 
 const sortedByAge = elbrus.sortByAge(); // Исходный массив менять нельзя
